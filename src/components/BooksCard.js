@@ -21,8 +21,8 @@ const useStyles = makeStyles(theme => ({
 		maxWidth: 350
 	},
 	media: {
-		height: 350,
-		width :350
+		height: 400,
+		width: 350
 	}
 }))
 
@@ -30,30 +30,36 @@ function BooksCard({ Name, Type, Date, Description, Image }) {
 	const classes = useStyles()
 	return (
 		<div className={classes.root}>
+			<Grid cotainer direction='row' align="center" justify="center">
 			<Grid item xs={10}>
 				<Card className={classes.card}>
 					<CardActionArea>
-						<CardMedia className={classes.media} image={Image} Name='React' />
+						<CardMedia className={classes.media} image={Image} title='React' />
 						<CardContent>
-							<Typography gutterBottom variant='h5' component='h2'>
-								{createGenerateClassName}
+							<Typography gutterBottom variant='h5' component='h1'>
+								{Name}
 							</Typography>
 							<Typography variant='body2' color='textSecondary' component='p'>
 								 {Type}
 							</Typography>
+							<Typography gutterBottom variant='h3' component='h2' />
+                            {Date}
 						</CardContent>
 					</CardActionArea>
 					<CardContent>
-						<Typography paragraph variant='body2'>
+						<Typography paragraph variant='body2' component='h6'>
 							{Description}
 						</Typography>
 					</CardContent>
-					<CardActions>
-						<Button size='small' variant='outlined' color='primary'>
-							{Date}
+					<CardContent>
+					<CardActions class={{root: classes.root}}>
+						<Button size='small' variant='outlined' color='tertiary'>
+							Register
 						</Button>
 					</CardActions>
+					</CardContent>
 				</Card>
+			</Grid>
 			</Grid>
 		</div>
 	)
