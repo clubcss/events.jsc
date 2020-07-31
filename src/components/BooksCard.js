@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }))
 
-function BooksCard({ Name, Type, Date, Description, Image }) {
+function BooksCard({ Name, Type, Date, Description, Image, Link }) {
 	const classes = useStyles()
 	return (
 		<div className={classes.root}>
@@ -54,7 +54,7 @@ function BooksCard({ Name, Type, Date, Description, Image }) {
 					<CardContent>
 					<CardActions class={{root: classes.root}}>
 						<Button size='small' variant='outlined' color='tertiary'>
-							Register
+							<a href={Link}>Register</a>
 						</Button>
 					</CardActions>
 					</CardContent>
