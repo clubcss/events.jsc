@@ -40,7 +40,7 @@ class App extends React.Component {
 						<BooksCard {...book.fields} key={book.fields.id} />
 					))}
 				</Grid>
-				<div align="center" justify="center" ><h4><footer>&copy; Copyright 2020 <a href="https://aks.one">https://aks.one</a></footer></h4></div>
+				<div align="center" justify="center" ><h4><footer>&copy; Copyright 2020 <a href="https://cssclub.team">CLUB.css</a></footer></h4></div>
 				</Typography>
 				</ThemeProvider>
 			)
