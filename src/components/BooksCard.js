@@ -53,7 +53,7 @@ function BooksCard({ Name, Type, Date, Description, Image, Link }) {
 					</CardContent>
 					<CardContent>
 					<CardActions class={{root: classes.root}}>
-						<Button size='small' variant='outlined' color='tertiary'>
+						<Button size='small' variant='outlined' color='inherited'>
 							<a href={Link}>Register</a>
 						</Button>
 					</CardActions>
