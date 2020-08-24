@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }))
 
-function BooksCard({ Name, Type, Date, Description, Image, Link }) {
+function BooksCard({ Name, Type, Date, Description, Image, Link, Mode }) {
 	const classes = useStyles()
 	return (
 		<div className={classes.root}>
@@ -38,6 +38,9 @@ function BooksCard({ Name, Type, Date, Description, Image, Link }) {
 						<CardContent>
 							<Typography gutterBottom variant='h5' component='h1'>
 								{Name}
+							</Typography>
+		                                        <Typography paragraph variant='body3' component='p' align="right">
+                                                                {Mode}
 							</Typography>
 							<Typography variant='body2' color='textSecondary' component='p'>
 								 {Type}
